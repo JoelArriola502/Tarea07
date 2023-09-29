@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      body{
+       
+        display: flex;
+        text-align: center;
+        place-items: center;
+        justify-content: center;
+        margin: 0%;
+        padding: 0%;
+    }
+    .mostrar1{
+      padding: 10px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+      
+    }
+ 
+  .mostrar{
+   
+    padding:25px;
+    margin: 25px;
+    display: flex;
+    border-radius: 0.5em;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    text-decoration: none;
+  }
+  .Datos{
+   
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+}
+  img{
+    width: 100%;
+    padding: 5PX;
+    margin: 5PX;
+    border-radius: 20px;
+
+
+}
+nav{
+  padding: 50px;
+  margin: 50px;
+}
+    </style>
+  
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body style="background-color: black; color:#fff">
+    <div class="Principal">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+       
+        <a href="/create" class="btn btn-outline-primary mt-4">nuevo</a>
+        <img src="https://logos-world.net/wp-content/uploads/2021/02/Amazon-Prime-Video-Symbol.png" alt="" style="width: 250px;">
+      </div>
+    </nav>
+    <div class="Datos" style="margin: 10%;">
+      <div class="bd" style="background-color: rgba(19, 19, 19, 0.336);margin:10%">
+   
+   <% results.forEach((Pelicula) => { %>
+    <div class="mostrar1">
+   
+    <div clas="mostrar" style="margin: 10%;background-color: rgba(36, 19, 184, 0.266)">
+      
+      <h2 >Name:<%= Pelicula.Nombre %></h2> 
+      <img src="<%= Pelicula.img %>"> 
+      <h2>Director:<%= Pelicula.Director %></h2> 
+    </div>
+  </div>
+  <% }); %>
+</div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
